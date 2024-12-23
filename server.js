@@ -1,21 +1,15 @@
-const http = require('http');
-const fs = require('fs');
+const express = require('express');
 const path = require('path');
+const app = express();
+const PORT = process.env.PORT || 3001;
 
-const server = http.createServer((req, res) => {
-  const filePath = path.join(__dirname, 'Mytalorzone', 'index.html');
-  fs.readFile(filePath, (err, content) => {
-    if (err) {
-      res.writeHead(500);
-      res.end(`Error loading the file: ${err.message}`);
-    } else {
-      res.writeHead(200, { 'Content-Type': 'text/html' });
-      res.end(content, 'utf-8');
-    }
-  });
+// Serve static files from the Mytalorzone directory
+app.use(express.static(path.join(__dirname, 'Mytalorzone')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'Mytalorzone', 'index.html'));
 });
 
-const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => {
+app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
