@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: black;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            display: flex;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            padding: 20px;
+            overflow: auto;
+        }
+        .img {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+        }
+        img {
+            width: 150px;
+            height: auto;
+        }
+        div{
+            display: block;
+            unicode-bidi: isolate;
+        }
+        .prof {
+            border-radius: 10px;
+            align-items: center;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            max-width: 90vw;
+            width: 400px;
+            box-sizing: border-box;
+        }
+        h1{
+            font-family: cursive;
+            color: #1e90ff;
+            margin-bottom: 20px;
+        }
+        input {
+            width: 250px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #1e90ff;
+            border-radius: 5px;
+            color: black;
+            font-size: 16px;
+        }
+        input:hover {
+            color:black;
+        }
+        input::placeholder{
+            color: grey;
+        }
+        .link-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            align-items: center;
+            gap: 20px;
+        }
+        button {
+            width: 250px;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #1e90ff;
+            border-radius: 5px;
+            background-color: #1e90ff;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #005da9;
+        }
+        a {
+            text-decoration: none;
+            color: #1e90ff;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+            color: #005da9;
+        }
+        @media (max-width: 600px) {
+            .prof {
+                padding: 20px;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="img">
+        <a href="index.html"><img src="MBS_Mytalorzone.jpeg" /></a>
+    </div>
+    <div class="prof">
+         <h1 class="login">Login</h1>
+         <input type="email" placeholder="Email" required/>
+         <input type="password" placeholder="Password" required/>
+         <a href="#login"><button type="submit" onclick="showMessage('You are Logged in!')">Login</button></a>
+         <br>
+         <div class="link-row">
+         <a href="#">Forgot Password?</a>
+         <br>
+         <a href="#">Forgot Username?</a>
+         <br>
+         </div>
+         <br>
+         <a href="register.html">Register</a>
+    </div>
+
+    <script>
+        function showMessage(message) {
+            aleart(message);
+        }
+    </script> 
+
+</body>
+</html>

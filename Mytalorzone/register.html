@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body {
+            display: flex;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: white;
+            color:black;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            padding: 20px;
+            overflow: auto;
+        }
+        .img {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+        }
+        img {
+            width: 150px;
+            height: auto;
+        }
+        .reg {
+            border-radius: 10px;
+            box-shadow: 1px 1px 3px 1px rgb(0, 0, 0, 0.5);
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            display: flex;
+            padding: 30px;
+            box-sizing: border-box;
+            width: 400px;
+            max-width: 90vw;
+            transition: all 0.3s ease;
+        }
+        h1 {
+            font-family: cursive;
+            color: #1e90ff;
+            margin-bottom:  20px;
+        }
+        input {
+            width: 250px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #1e90ff;
+            border-radius: 5px;
+            color: black;
+            font-size: 16px;
+        }
+        input:hover {
+            color: black;
+        }
+        input::placeholder {
+            color: grey;
+        }
+        a { 
+            text-decoration: none;
+            color: #1e90ff;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #005da9;
+
+        }
+        button {
+            width: 250px;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #1e90ff;
+            border-radius: 5px;
+            background-color: #1e90ff;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #005da9;
+        }
+        @media screen and (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .reg {
+                width: 90%;
+                margin-left: 122200000000000000000000px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="img">
+    <a href="index.html"><img src="MBS_Mytalorzone.jpeg" /></a>
+    </div>
+    <div class="reg">
+        <h1>Register</h1>
+        <input type="text" id="firstname" placeholder="First Name" reuired/>
+        <br>
+        <input type = "text" id = "lastname" placeholder="Last Name" required/>
+        <br>
+        <input type = "email" placeholder="Email" required/>
+        <br>
+        <input type = "password" placeholder="Password" required/>
+        <br>
+        <input type="password" placeholder="Confim Password" required />
+        <br>
+        
+        <a href="#"><button type="submit">Submit</button></a>
+
+        <p>If you are already registered.? Please login</p>
+
+        <a href="profile.html">Login</a>
+    </div>
+    </div>
+</body>
+</html>
