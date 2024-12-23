@@ -1,0 +1,25 @@
+{
+  "name": "cloth-store",
+  "version": "1.0.0",
+  "description": "A web-based platform for purchasing fashionable clothing items.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LohithaYerra/Cloth-store.git"
+  },
+  "keywords": [
+    "fashion",
+    "clothing",
+    "ecommerce"
+  ],
+  "author": "Lohitha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LohithaYerra/Cloth-store/issues"
+  },
+  "homepage": "https://github.com/LohithaYerra/Cloth-store#readme"
+}
